@@ -1,0 +1,17 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-repeat.html">
+<link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
+
+<dom-module id="tab-selector">
+  <template>
+    <link rel="stylesheet" href="tab-selector.css">
+    <iron-selector class="tabs" attr-for-selected="tab" selected="{{selectedTab}}">
+        <dom-repeat items="[[tabs]]" as="item">
+            <template>
+                <div class="tab" tab="[[item]]">[[item]]</div>
+            </template>
+        </dom-repeat>
+    </iron-selector>
+  </template>
+  <script src="tab-selector.js"></script>
+</dom-module>

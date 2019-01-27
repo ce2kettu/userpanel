@@ -1,0 +1,34 @@
+{
+    "name": "userpanel",
+    "authors": [
+        "Teemu Ketonen <teemu.ket@gmail.com>"
+    ],
+    "description": "A user interface for managing and viewing important things - in form of a panel-like window. [Polymer]",
+    "main": "index.html",
+    "license": "GNU GPLv3",
+    "homepage": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "polymer": "Polymer/polymer#^2.0.0",
+        "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
+        "iron-pages": "PolymerElements/iron-pages#^2.0.0",
+        "iron-selector": "PolymerElements/iron-selector#^2.0.0",
+        "iron-icons": "PolymerElements/iron-icons#^2.0.0",
+        "iron-icon": "PolymerElements/iron-icon#^2.0.0",
+        "iron-flex-layout": "PolymerElements/iron-flex-layout#^2.0.0",
+        "paper-dialog": "PolymerElements/paper-dialog#^2.0.0",
+        "paper-slider": "PolymerElements/paper-slider#^2.0.0",
+        "paper-button": "PolymerElements/paper-button#^2.0.0",
+        "paper-styles": "PolymerElements/paper-styles#^2.0.0",
+        "paper-radio-group": "PolymerElements/paper-radio-group#^2.0.0"
+    },
+    "devDependencies": {
+        "web-component-tester": "^6.0.0"
+    }
+}

@@ -1,0 +1,38 @@
+:host {
+    display: block;
+}
+
+.toggle {
+    cursor: pointer;
+    width: 6em;
+    height: 3em;
+    background: grey;
+    display: block;
+    border-radius: 3em;
+    position: relative;
+}
+
+.toggle:after {
+    content: '';
+    position: absolute;
+    top: 0.2em;
+    left: 0.2em;
+    width: 2.6em;
+    height: 2.6em;
+    background: #fff;
+    border-radius: 3.5em;
+    transition: transform .3s, width .3s, left .3s;
+}
+
+:host([checked]) .toggle {
+    background: #3a71c1;
+}
+
+:host([checked]) .toggle:after {
+    left: calc(100% - 0.2em);
+    transform: translateX(-100%);
+}
+
+.toggle:active:after {
+    width: 3.5em;
+}

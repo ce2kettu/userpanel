@@ -1,0 +1,66 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-repeat.html">
+<link rel="import" href="../../bower_components/polymer/lib/mixins/gesture-event-listeners.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../dropdown-menu/dropdown-menu.html">
+<link rel="import" href="../app-icons/app-icons.html">
+
+<dom-module id="help-page">
+  <template>
+    <link rel="stylesheet" href="help-page.css">
+    <div class="commands">
+      <div class="commands__player">
+        <div class="items">
+          <div class="commands__subheader">Player commands</div>
+          <dom-repeat id="itemList" items="[[commands.player]]" as="command">
+            <template>
+              <div class="command">
+                <div class="command__content">
+                  <iron-icon class="command__icon" icon="appicons:command"></iron-icon>
+                  <div class="command__text">[[command.name]]
+                    <div class="command__secondary">[[command.description]]</div>
+                  </div>
+                  <iron-icon class="command__show-more" icon="appicons:dropdown" on-tap="_showMore"></iron-icon>
+                </div>
+                <div class="command__more">
+                  <div class="command__detail">
+                    <div class="more__subtitle">Usage</div>[[command.usage]]</div>
+                </div>
+              </div>
+            </template>
+          </dom-repeat>
+        </div>
+      </div>
+      <div class="commands__admin">
+        <div class="items">
+          <div class="commands__subheader">Admin commands</div>
+          <div class="filter">
+            <div class="filter__title">Filter</div>
+            <dropdown-menu items="[[levels]]" selected-item="{{selectedLevel}}"></dropdown-menu>
+            <div class="filter__value">[[_getLevel(selectedLevel)]]</div>
+          </div>
+          <dom-repeat items="[[_levelFilter(selectedLevel, commands.admin)]]" as="command">
+            <template>
+              <div class="command command--admin">
+                <div class="command__content">
+                  <iron-icon class="command__icon" icon="appicons:command"></iron-icon>
+                  <div class="command__text">[[command.name]]
+                    <div class="command__secondary">[[command.description]]</div>
+                  </div>
+                  <iron-icon class="command__show-more" icon="appicons:dropdown" on-tap="_showMore"></iron-icon>
+                </div>
+                <div class="command__more">
+                  <div class="command__detail">
+                    <div class="more__subtitle">Usage</div>[[command.usage]]</div>
+                  <div class="command__detail">
+                    <div class="more__subtitle">Level</div>[[command.level]]</div>
+                </div>
+              </div>
+            </template>
+          </dom-repeat>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="help-page.js"></script>
+</dom-module>

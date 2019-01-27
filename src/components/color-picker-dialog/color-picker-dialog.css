@@ -1,0 +1,143 @@
+:host {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    visibility: hidden;
+}
+
+:host([opened]) {
+    visibility: visible;
+}
+
+:host([opened]) .overlay {
+    display: block;
+    opacity: 0.1;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: opacity .3s linear, background-color .3s linear;
+    opacity: 0;
+    pointer-events: none;
+    backface-visibility: hidden;
+    z-index: 1;
+}
+
+.dialog {
+    width: 35em;
+    min-height: 5em;
+    background: #fff;
+    z-index: 2;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.dialog__inner {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    padding: 0.6em;
+    box-sizing: border-box;
+}
+
+.preview {
+    width: 100%;
+    height: 15em;
+    border-radius: 3px;
+    transition: background-color .25s linear;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.sliders {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.red {
+    width: 100%;
+    --paper-slider-active-color: var(--paper-red-700);
+    --paper-slider-knob-color: var(--paper-red-700);
+    --paper-slider-pin-color: var(--paper-red-700);
+}
+
+.green {
+    width: 100%;
+    --paper-slider-active-color: var(--paper-green-700);
+    --paper-slider-knob-color: var(--paper-green-700);
+    --paper-slider-pin-color: var(--paper-green-700);
+}
+
+.blue {
+    width: 100%;
+    --paper-slider-active-color: var(--paper-blue-700);
+    --paper-slider-knob-color: var(--paper-blue-700);
+    --paper-slider-pin-color: var(--paper-blue-700);
+}
+
+.actions {
+    display: flex;
+    padding: 0.3em 1.1em;
+    box-sizing: border-box;
+    border-top: 1px solid #eee;
+}
+
+.actions__flex {
+    flex-grow: 1;
+}
+
+.actions__button {
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 2.5em;
+    color: rgba(0, 0, 0, 0.87);
+    display: inline-block;
+    position: relative;
+    min-width: 5em;
+    height: 2.5em;
+    padding: 0 1.1em;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background: transparent;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    vertical-align: middle;
+    user-select: none;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: background-color .25s linear;
+}
+
+.actions__button:hover {
+    background-color: #F5F5F5;
+}
+
+.actions__button:active {
+    background-color: #e2e2e2;
+}

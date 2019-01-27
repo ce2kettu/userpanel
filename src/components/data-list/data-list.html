@@ -1,0 +1,26 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-repeat.html">
+<link rel="import" href="../../bower_components/polymer/lib/mixins/gesture-event-listeners.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../app-icons/app-icons.html">
+
+<dom-module id="data-list">
+    <template>
+        <link rel="stylesheet" href="data-list.css">
+        <div class="items">
+            <dom-repeat id="itemList" items="[[items]]" as="item">
+                <template>
+                    <div class="row" on-tap="_sellItem">
+                        <iron-icon class="row__icon" icon="appicons:[[type]]"></iron-icon>
+                        <div class="row__text">
+                            <div class="row__primary">[[item.name]]</div>
+                            <div class="row__secondary">[[_formatMoney(item.price)]]</div>
+                        </div>
+                        <iron-icon class="row__sell" icon="appicons:minus"></iron-icon>
+                    </div>
+                </template>
+            </dom-repeat>
+        </div>
+    </template>
+    <script src="data-list.js"></script>
+</dom-module>

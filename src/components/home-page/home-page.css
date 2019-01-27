@@ -1,0 +1,12 @@
+:host {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #BDBDBD;
+    min-height: 50px;
+}

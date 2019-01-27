@@ -1,0 +1,21 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../app-icons/app-icons.html">
+
+<dom-module id="notification-box">
+    <template>
+        <link rel="stylesheet" href="notification-box.css">
+
+        <div class="notification">
+            <div class="notification__inner">
+                <iron-icon class="notification__icon" icon="appicons:notification"></iron-icon>
+                <div class="notification__detail">
+                <div class="notification__title">[[title]]</div>
+                <div class="notification__subtitle">[[subtitle]]</div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="notification-box.js"></script>
+</dom-module>

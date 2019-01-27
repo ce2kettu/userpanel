@@ -1,0 +1,34 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 1.1em;
+}
+
+.tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7em;
+    font-weight: 500;
+    padding: 0.5em;
+    box-sizing: border-box;
+    width: 100%;
+    text-transform: uppercase;
+    height: 3em;
+    transition: background-color .3s ease;
+    cursor: pointer;
+    background-color: #2A2C31;
+}
+
+.iron-selected {
+    background-color: #1e2124 !important;
+}

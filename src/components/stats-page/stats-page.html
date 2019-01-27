@@ -1,0 +1,124 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../app-icons/app-icons.html">
+<link rel="import" href="../data-list/data-list.html">
+
+<dom-module id="stats-page">
+    <template>
+        <link rel="stylesheet" href="stats-page.css">
+        <div class="stats">
+            <div class="stats__header">General statistics</div>
+            <div class="stats__rows">
+                <div class="stats__row">
+                    <iron-icon class="stats__row-icon" icon="appicons:money"></iron-icon>
+                    <div class="stats__row-text">
+                        <div class="stats__row-primary">[[_formatMoney(player.stats.cash)]]</div>
+                        <div class="stats__row-secondary">Cash</div>
+                    </div>
+                </div>
+                <div class="stats__row">
+                    <iron-icon class="stats__row-icon" icon="appicons:deathmatches"></iron-icon>
+                    <div class="stats__row-text">
+                        <div class="stats__row-primary">[[player.stats.deathmatches]]</div>
+                        <div class="stats__row-secondary">Deathmatches</div>
+                    </div>
+                </div>
+                <div class="stats__row">
+                    <iron-icon class="stats__row-icon" icon="appicons:wins"></iron-icon>
+                    <div class="stats__row-text">
+                        <div class="stats__row-primary">[[player.stats.wins]]</div>
+                        <div class="stats__row-secondary">Wins</div>
+                    </div>
+                </div>
+                <div class="stats__row">
+                    <iron-icon class="stats__row-icon" icon="appicons:ratio"></iron-icon>
+                    <div class="stats__row-text">
+                        <div class="stats__row-primary">[[player.stats.ratio]]</div>
+                        <div class="stats__row-secondary">Ratio</div>
+                    </div>
+                </div>
+                <div class="stats__row">
+                    <iron-icon class="stats__row-icon" icon="appicons:points"></iron-icon>
+                    <div class="stats__row-text">
+                        <div class="stats__row-primary">[[player.stats.points]]</div>
+                        <div class="stats__row-secondary">Points</div>
+                    </div>
+                </div>
+                <div class="stats__row">
+                    <iron-icon class="stats__row-icon" icon="appicons:price"></iron-icon>
+                    <div class="stats__row-text">
+                        <div class="stats__row-primary">[[_formatMoney(player.stats.price)]]</div>
+                        <div class="stats__row-secondary">Price</div>
+                    </div>
+                </div>
+                <div class="stats__row">
+                    <iron-icon class="stats__row-icon" icon="appicons:owner"></iron-icon>
+                    <div class="stats__row-text">
+                        <div class="stats__row-primary">[[player.stats.owner]]</div>
+                        <div class="stats__row-secondary">Owner</div>
+                    </div>
+                </div>
+                <div class="stats__row">
+                    <iron-icon class="stats__row-icon" icon="appicons:gametime"></iron-icon>
+                    <div class="stats__row-text">
+                        <div class="stats__row-primary">[[_formatGametime(player.stats.gametime)]]</div>
+                        <div class="stats__row-secondary">Gametime</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats__gambling">
+                <div class="stats__gambling-header">
+                    Gambling statistics
+                    <iron-icon class="stats__gambling__header-icon" icon="appicons:gambling"></iron-icon>
+                </div>
+                <div class="stats__row">
+                    <div class="stats__gambling-icon"></div>
+                    <div class="stats__row-text">
+                        <div class="stats__row-primary">[[player.stats.rolls]]</div>
+                        <div class="stats__row-secondary">Rolls</div>
+                    </div>
+                </div>
+                <div class="stats__row">
+                    <div class="stats__gambling-icon"></div>
+                    <div class="stats__row-text">
+                        <div class="stats__row-primary">[[player.stats.spins]]</div>
+                        <div class="stats__row-secondary">Spins</div>
+                    </div>
+                </div>
+                <div class="stats__row">
+                    <div class="stats__gambling-icon"></div>
+                    <div class="stats__row-text">
+                        <div class="stats__row-primary">[[_formatMoney(player.stats.cashin)]]</div>
+                        <div class="stats__row-secondary">Cash-in</div>
+                    </div>
+                </div>
+                <div class="stats__row">
+                    <div class="stats__gambling-icon"></div>
+                    <div class="stats__row-text">
+                        <div class="stats__row-primary">[[_formatMoney(player.stats.cashout)]]</div>
+                        <div class="stats__row-secondary">Cash-out</div>
+                    </div>
+                </div>
+                <div class="stats__row">
+                    <div class="stats__gambling-icon"></div>
+                    <div class="stats__row-text">
+                        <div class="stats__row-primary">[[player.stats.gamblingRatio]]</div>
+                        <div class="stats__row-secondary">Gambling ratio</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="assets">
+            <div class="assets__maps">
+                <div class="assets__maps-title">Owned maps ([[player.ownedMaps.length]])</div>
+                <data-list items="[[player.ownedMaps]]" type="map" disabled></data-list>
+            </div>
+            <div class="assets__players">
+                <div class="assets__players-title">Owned players ([[player.ownedPlayers.length]])</div>
+                <data-list items="[[player.ownedPlayers]]" type="player"></data-list>
+            </div>
+        </div>
+    </template>
+    <script src="stats-page.js"></script>
+</dom-module>

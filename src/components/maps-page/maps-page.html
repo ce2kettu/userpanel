@@ -1,0 +1,35 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-repeat.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-if.html">
+<link rel="import" href="../../bower_components/polymer/lib/mixins/gesture-event-listeners.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../app-icons/app-icons.html">
+
+<dom-module id="maps-page">
+  <template>
+    <link rel="stylesheet" href="maps-page.css">
+    <div class="header">
+      <div class="header__search">
+        <input class="search__input" placeholder="Search" value="{{searchQuery::input}}">
+        <iron-icon class="search__icon" icon="appicons:search"></iron-icon>
+      </div>
+      <div class="search-results">
+        <dom-repeat id="itemList" items="[[queryResult]]" as="result">
+          <template>
+            <div class="result" on-tap="_buyItem">
+              <iron-icon class="result__icon" icon="appicons:map"></iron-icon>
+              <div class="result__text">[[_getItemValue(result)]]</div>
+              <iron-icon class="result__buy" icon="appicons:plus"></iron-icon>
+            </div>
+          </template>
+        </dom-repeat>
+        <dom-if if="{{_noResults(queryResult, queryResult.*)}}">
+          <template>
+            <div class="results--empty">No results</div>
+          </template>
+        </dom-if>
+      </div>
+    </div>
+  </template>
+  <script src="maps-page.js"></script>
+</dom-module>

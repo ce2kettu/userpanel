@@ -1,0 +1,134 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../color-picker/color-picker.html">
+<link rel="import" href="../dropdown-menu/dropdown-menu.html">
+<link rel="import" href="../toggle-button/toggle-button.html">
+<link rel="import" href="../app-icons/app-icons.html">
+
+<dom-module id="settings-page">
+  <template>
+    <link rel="stylesheet" href="settings-page.css">
+    <div class="items">
+      <div class="row">
+        <toggle-button checked="{{settings.mapTextures}}"></toggle-button>
+        <div class="row__text">
+          <div class="row__primary">Download textures</div>
+          <div class="row__secondary">For maps</div>
+        </div>
+      </div>
+      <div class="row">
+        <toggle-button checked="{{settings.downloadMusic}}"></toggle-button>
+        <div class="row__text">
+          <div class="row__primary">Download music</div>
+          <div class="row__secondary">For maps</div>
+        </div>
+      </div>
+      <div class="row">
+        <toggle-button checked="{{settings.panelTransparency}}"></toggle-button>
+        <div class="row__text">
+          <div class="row__primary">Make panel transparent</div>
+          <div class="row__secondary">For user panel</div>
+        </div>
+      </div>
+      <div class="row">
+        <toggle-button checked="{{settings.muteMusic}}"></toggle-button>
+        <div class="row__text">
+          <div class="row__primary">Mute music</div>
+          <div class="row__secondary">For maps</div>
+        </div>
+      </div>
+      <div class="row">
+        <dropdown-menu items="[[languages]]" selected-item="{{settings.language}}"></dropdown-menu>
+        <div class="row__text">
+          <div class="row__primary">[[settings.language]]</div>
+          <div class="row__secondary">Language</div>
+        </div>
+      </div>
+      <div class="row">
+        <color-picker color="{{settings.nitroColor}}"></color-picker>
+        <div class="row__text">
+          <div class="row__primary">Custom nitro color</div>
+          <div class="row__secondary">For vehicles</div>
+        </div>
+      </div>
+      <div class="row">
+        <color-picker color="{{settings.primaryColor}}"></color-picker>
+        <div class="row__text">
+          <div class="row__primary">Primary car color</div>
+          <div class="row__secondary">For vehicles</div>
+        </div>
+      </div>
+      <div class="row">
+        <color-picker color="{{settings.secondaryColor}}"></color-picker>
+        <div class="row__text">
+          <div class="row__primary">Secondary car color</div>
+          <div class="row__secondary">For vehicles</div>
+        </div>
+      </div>
+      <div class="row">
+        <color-picker color="{{settings.chatColor}}"></color-picker>
+        <div class="row__text">
+          <div class="row__primary">Chat color</div>
+          <div class="row__secondary">For players</div>
+        </div>
+      </div>
+<!--       <div class="row">
+        <toggle-button checked="{{settings.customLights}}"></toggle-button>
+        <div class="row__text">
+          <div class="row__primary">Use custom lights</div>
+          <div class="row__secondary">For vehicles</div>
+        </div>
+      </div>
+      <div class="row">
+        <toggle-button checked="{{settings.customSkin}}"></toggle-button>
+        <div class="row__text">
+          <div class="row__primary">Use custom skin</div>
+          <div class="row__secondary">For vehicles</div>
+        </div>
+      </div> -->
+      <div class="row">
+        <toggle-button checked="{{settings.customWheels}}"></toggle-button>
+        <div class="row__text">
+          <div class="row__primary">Use custom wheels</div>
+          <div class="row__secondary">For vehicles</div>
+        </div>
+      </div>
+      <div class="row">
+        <toggle-button checked="{{settings.enablePVP}}"></toggle-button>
+        <div class="row__text">
+          <div class="row__primary">Enable PVP</div>
+          <div class="row__secondary">For shooter</div>
+        </div>
+      </div>
+      <div class="row">
+        <toggle-button checked="{{settings.disablePrivateMessages}}"></toggle-button>
+        <div class="row__text">
+          <div class="row__primary">Disable private messages</div>
+          <div class="row__secondary">For players</div>
+        </div>
+      </div>
+      <div class="row">
+        <toggle-button checked="{{settings.customTextures}}"></toggle-button>
+        <div class="row__text">
+          <div class="row__primary">Use custom DDC textures</div>
+          <div class="row__secondary">For maps</div>
+        </div>
+      </div>
+      <div class="row">
+        <toggle-button checked="{{settings.hideGlobal}}"></toggle-button>
+        <div class="row__text">
+          <div class="row__primary">Hide global chat</div>
+          <div class="row__secondary">For players</div>
+        </div>
+      </div>
+      <div class="row">
+        <toggle-button checked="{{settings.hideInterface}}"></toggle-button>
+        <div class="row__text">
+          <div class="row__primary">Hide main interface</div>
+          <div class="row__secondary">For players</div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="settings-page.js"></script>
+</dom-module>

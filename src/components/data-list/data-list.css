@@ -1,0 +1,81 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1rem;
+}
+
+.items {
+    width: 100%;
+    height: 100%;
+    padding: 0.6em 1.1em 0;
+    box-sizing: border-box;
+}
+
+.row {
+    height: 4.3em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.45em 1.1em;
+    box-sizing: border-box;
+    border-radius: 3px;
+    transition: background-color .3s ease;
+    line-height: 1.7em;
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+
+:host(:not([disabled])) .row:hover {
+    background-color: rgba(245, 0, 40, 0.3);
+}
+
+.row__icon {
+    width: 3.1em;
+    height: 3.1em;
+    margin-left: 0;
+    margin-right: 1.1em;
+}
+
+.row__primary,
+.row__secondary {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 1.2em;
+}
+
+.row__sell {
+    width: 1.8em;
+    height: 1.8em;
+    margin-right: 0;
+    margin-left: 1.1em;
+    transition: opacity .3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+:host(:not([disabled])) .row:hover .row__sell {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.row__text {
+    flex: 1;
+    max-width: 90%;
+    font-size: 1.5em;
+    overflow: hidden;
+    color: #fafafa;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row__secondary {
+    font-size: 0.875em;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.54);
+}

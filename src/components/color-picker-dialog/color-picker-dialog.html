@@ -1,0 +1,34 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/mixins/gesture-event-listeners.html">
+<link rel="import" href="../../bower_components/paper-slider/paper-slider.html">
+
+<dom-module id="color-picker-dialog">
+    <template>
+        <link rel="stylesheet" href="color-picker-dialog.css">
+        <!--<div class="overlay" style$="background:[[color]];"></div>-->
+        <div class="dialog">
+            <div class="dialog__inner">
+                <div class="dialog__content">
+                    <div class="container">
+                        <div style$="background-color:[[color]];" class="preview"></div>
+                        <div class="sliders">
+                            <paper-slider pin min="0" max="255" immediate-value="{{redVal}}" value="[[redVal]]" class="red">
+                            </paper-slider>
+                            <paper-slider pin min="0" max="255" immediate-value="{{greenVal}}" value="[[greenVal]]" class="green">
+                            </paper-slider>
+                            <paper-slider pin min="0" max="255" immediate-value="{{blueVal}}" value="[[blueVal]]" class="blue">
+                            </paper-slider>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <div class="actions__button" on-tap="_closeDialog">Cancel</div>
+                    <div class="actions__flex"></div>
+                    <div class="actions__button" data-push on-tap="_closeDialog">Reset</div>
+                    <div class="actions__button" data-push="save" on-tap="_closeDialog">OK</div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script src="color-picker-dialog.js"></script>
+</dom-module>

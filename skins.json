@@ -1,0 +1,355 @@
+[
+  [{
+      "_id": "594ecae01a9b502e40663656",
+      "name": 1,
+      "type": "skins",
+      "price": 25000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae081f765562ee8173b",
+      "name": 2,
+      "type": "skins",
+      "price": 20000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae06e93da7d1f6f8e85",
+      "name": 3,
+      "type": "skins",
+      "price": 25000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae00e4a090235fb78aa",
+      "name": 4,
+      "type": "skins",
+      "price": 35000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0588200552599b852",
+      "name": 5,
+      "type": "skins",
+      "price": 20000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0472922d43bdfea83",
+      "name": 6,
+      "type": "skins",
+      "price": 20000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae079b16f637daa15da",
+      "name": 7,
+      "type": "skins",
+      "price": 25000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0fe786d3d8aa78db7",
+      "name": 8,
+      "type": "skins",
+      "price": 15000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae08bedb1a484f717f0",
+      "name": 9,
+      "type": "skins",
+      "price": 15000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0828218dd3e8c29e5",
+      "name": 10,
+      "type": "skins",
+      "price": 25000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0909a3cfc6a7a513f",
+      "name": 11,
+      "type": "skins",
+      "price": 40000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae03ec3db8f1e26c110",
+      "name": 12,
+      "type": "skins",
+      "price": 195000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0460461f873418c87",
+      "name": 13,
+      "type": "skins",
+      "price": 35000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0077b2ec2712f474a",
+      "name": 14,
+      "type": "skins",
+      "price": 45000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae088ce0a88658b800f",
+      "name": 15,
+      "type": "skins",
+      "price": 50000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0f16d9f58807fe8e1",
+      "name": 16,
+      "type": "skins",
+      "price": 45000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0b0d2fc3c16b72528",
+      "name": 17,
+      "type": "skins",
+      "price": 15000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0d73e4e6a5a0869e0",
+      "name": 18,
+      "type": "skins",
+      "price": 15000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae056ac14203cea5b15",
+      "name": 19,
+      "type": "skins",
+      "price": 25000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae08589ca7518894163",
+      "name": 20,
+      "type": "skins",
+      "price": 20000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae036ec79c2c7e7e389",
+      "name": 21,
+      "type": "skins",
+      "price": 25000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0f072125224d7c908",
+      "name": 22,
+      "type": "skins",
+      "price": 45000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae038dc9111e50cb32a",
+      "name": 23,
+      "type": "skins",
+      "price": 35000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0d730c719c48b9088",
+      "name": 24,
+      "type": "skins",
+      "price": 55000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0f4f7af3249112158",
+      "name": 25,
+      "type": "skins",
+      "price": 35000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae07ea706ab643b30a5",
+      "name": 26,
+      "type": "skins",
+      "price": 45000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0fd6cdd3dd6561699",
+      "name": 27,
+      "type": "skins",
+      "price": 50000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae05226a3e20e1a490d",
+      "name": 28,
+      "type": "skins",
+      "price": 60000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae04da545f125fd9f9f",
+      "name": 29,
+      "type": "skins",
+      "price": 75000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae07567eace5495658e",
+      "name": 30,
+      "type": "skins",
+      "price": 85000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0514e88d67221d291",
+      "name": 31,
+      "type": "skins",
+      "price": 105000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0988e143e9779969f",
+      "name": 32,
+      "type": "skins",
+      "price": 75000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae02a49fc634c5cb44d",
+      "name": 33,
+      "type": "skins",
+      "price": 125000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0340c69286a3b8ec8",
+      "name": 34,
+      "type": "skins",
+      "price": 85000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0a5796d472f90e95a",
+      "name": 35,
+      "type": "skins",
+      "price": 65000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0195e3c8cffc4fe7b",
+      "name": 36,
+      "type": "skins",
+      "price": 35000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae00a432204d524427a",
+      "name": 37,
+      "type": "skins",
+      "price": 25000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594ecae0f8e1f7c3237269f2",
+      "name": 38,
+      "type": "skins",
+      "price": 25000000,
+      "purchasable": true,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594f8c7ed6f4ec7595a1bfdc",
+      "name": 61,
+      "type": "skins",
+      "price": 50000,
+      "purchasable": false,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594f8c7e8ca2de1e4b4ca4d9",
+      "name": 62,
+      "type": "skins",
+      "price": 50000,
+      "purchasable": false,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594f8c7eec309090bb62a574",
+      "name": 63,
+      "type": "skins",
+      "price": 50000,
+      "purchasable": false,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594f8c7e113e39a405476109",
+      "name": 64,
+      "type": "skins",
+      "price": 50000,
+      "purchasable": false,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594f8c7eaf14d811e2d527f8",
+      "name": 65,
+      "type": "skins",
+      "price": 50000,
+      "purchasable": false,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    },
+    {
+      "_id": "594f8c7e6736cd5b65ce382a",
+      "name": 66,
+      "type": "skins",
+      "price": 50000,
+      "purchasable": false,
+      "players": ["Stieg", "NoHear", "Bonsai", "test"]
+    }
+  ]
+]

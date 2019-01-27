@@ -1,0 +1,24 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-repeat.html">
+<link rel="import" href="../../bower_components/polymer/lib/mixins/gesture-event-listeners.html">
+<link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../app-icons/app-icons.html">
+
+<dom-module id="dropdown-menu">
+    <template>
+        <link rel="stylesheet" href="dropdown-menu.css">
+        <div class="overlay" on-tap="_closeOverlay"></div>
+        <iron-icon class="toggle" on-tap="toggle" icon="appicons:dropdown"></iron-icon>
+        <div class="items">
+            <iron-selector attr-for-selected="value" selected="{{selectedItem}}">
+                <dom-repeat items="[[items]]" as="item">
+                    <template>
+                        <div class="item" value="[[item]]">[[item]]</div>
+                    </template>
+                </dom-repeat>
+            </iron-selector>
+        </div>
+    </template>
+    <script src="dropdown-menu.js"></script>
+</dom-module>

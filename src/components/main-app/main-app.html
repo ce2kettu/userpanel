@@ -1,0 +1,37 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../color-picker-dialog/color-picker-dialog.html">
+<link rel="import" href="../screen-overlay/screen-overlay.html">
+<link rel="import" href="../notification-box/notification-box.html">
+<link rel="import" href="../sidebar-menu/sidebar-menu.html">
+<link rel="import" href="../page-controller/page-controller.html">
+<link rel="import" href="../tops-page/tops-page.html">
+<link rel="import" href="../stats-page/stats-page.html">
+<link rel="import" href="../shop-page/shop-page.html">
+<link rel="import" href="../maps-page/maps-page.html">
+<link rel="import" href="../settings-page/settings-page.html">
+<link rel="import" href="../help-page/help-page.html">
+<link rel="import" href="../global-datastore/global-datastore.html">
+
+<dom-module id="main-app">
+  <template>
+    <link rel="stylesheet" href="main-app.css">
+    <global-datastore player="{{player}}" languages="{{languages}}" maps="{{maps}}" shop-data="{{shopData}}" mutable-data></global-datastore>
+    <div class="panel">
+      <color-picker-dialog></color-picker-dialog>
+      <notification-box></notification-box>
+      <sidebar-menu selected-page="{{selectedPage}}" is-first-time="{{player.settings.isFirstTime}}"></sidebar-menu>
+      <div class="panel__body">
+        <div class="background" transparent$="{{player.settings.panelTransparency}}"></div>
+        <page-controller attr-for-selected="page" selected="{{selectedPage}}">
+          <stats-page page="stats" player="{{player}}"></stats-page>
+          <tops-page page="tops"></tops-page>
+          <shop-page page="shop" player="{{player}}" shop-data="{{shopData}}"></shop-page>
+          <maps-page page="maps" player="{{player}}" maps="{{maps}}"></maps-page>
+          <settings-page page="settings" settings="{{player.settings}}" languages="{{languages}}"></settings-page>
+          <help-page page="help"></help-page>
+        </page-controller>
+      </div>
+    </div>
+  </template>
+  <script src="main-app.js"></script>
+</dom-module>

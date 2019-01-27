@@ -1,0 +1,28 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-repeat.html">
+<link rel="import" href="../../bower_components/polymer/lib/mixins/gesture-event-listeners.html">
+<link rel="import" href="../tab-selector/tab-selector.html">
+
+<dom-module id="shop-page">
+  <template>
+    <link rel="stylesheet" href="shop-page.css">
+    <tab-selector tabs="[[tabs]]" selected-tab="{{selectedTab}}"></tab-selector>
+      <div class="items">
+        <dom-repeat id="itemList" items="[[_getItems(selectedTab, shopData.*)]]" as="item">
+          <template>
+            <div class="item" exclusive$="[[!_isExclusive(item, player.*)]]" equipped$="[[_isEquipped(item, player.*)]]">
+              <div class="item__image" style$="[[_getItemImage(item.name, item.type)]]" type$="[[item.type]]"></div>
+              <div class="item__exclusive">Exclusive</div>
+              <div class="item__inner">
+                <div class="item__equip item__button" on-tap="_equipItem" hidden$="[[!_canEquip(item, player.*)]]">[[_computeEquipLabel(item, player.*)]]</div>
+                <div class="item__buy item__button" on-tap="_buyItem" hidden$="[[!_isPurchasable(item, player.*)]]">[[_computeBuyLabel(item, player.*)]]</div>
+              </div>
+            </div>
+          </template>
+        </dom-repeat>
+        <div class="filling-empty-space-childs"></div>
+        <div class="filling-empty-space-childs"></div>
+      </div>
+  </template>
+  <script src="shop-page.js"></script>
+</dom-module>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <title>userpanel</title>
+  <script>
+    /**
+     * Disable dragging of images
+     */
+    window.ondragstart = () => {
+      return;
+    };
+
+    /**
+     * Disable tab usage
+     */
+    window.onkeydown = e => {
+      if (e.keyCode === 9) {
+        e.preventDefault();
+      }
+    }
+
+    /**
+     *  Define global variable for easier access to data and functions
+     */
+    window.app = window.app || {};
+
+    /**
+     * Hotfix to allow local development because functions are triggering 'unknown' events (remove in production)
+     */
+    window.mta = {};
+    mta.triggerEvent = () => {
+      return;
+    };
+
+    /**
+     * Define Polymer rootPath
+     */
+    window.Polymer = {
+      rootPath: '/'
+    };
+  </script>
+  <style>
+    html {
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #fefefe;
+      /* Remove line below in production */
+      background-image: url('images/bg.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      user-select: none;
+    }
+
+    @font-face {
+      font-family: "Roboto";
+      src: url(fonts/Roboto-Light.ttf) format("truetype");
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Roboto";
+      src: url(fonts/Roboto-Regular.ttf) format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Roboto";
+      src: url(fonts/Roboto-Medium.ttf) format("truetype");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Roboto";
+      src: url(fonts/Roboto-Bold.ttf) format("truetype");
+      font-weight: 700;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <main-app></main-app>
+  <script>
+    /**
+     * Handle responsiveness
+     */
+    resize = () => {
+      const height = document.body.offsetHeight;
+      const fontSize = Math.round((height / 1080) * 100);
+      document.querySelector('body').style.fontSize = fontSize + '%';
+    };
+
+    resize();
+
+    window.onresize = () => {
+      resize();
+    };
+  </script>
+  <script type="text/javascript" charset="utf-8" src="dist/build.js"></script>
+</body>
+
+</html>

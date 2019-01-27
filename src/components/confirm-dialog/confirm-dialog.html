@@ -1,0 +1,24 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/mixins/gesture-event-listeners.html">
+
+<dom-module id="confirm-dialog">
+    <template>
+        <link rel="stylesheet" href="confirm-dialog.css">
+        <div class="overlay"></div>
+
+        <div class="confirm-dialog">
+            <div class="dialog-inner">
+                <div class="content">
+                    <div class="dialog-header">Confirm action</div>
+                    <div class="dialog-subheader">Confirm selling of player Cat.Master</div>
+                </div>
+                <div class="actions">
+                    <div class="action">Cancel</div>
+                    <div class="action">Confirm</div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="confirm-dialog.js"></script>
+</dom-module>

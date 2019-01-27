@@ -1,0 +1,33 @@
+{
+  "name": "userpanel",
+  "version": "1.0.0",
+  "description": "A user interface for managing and viewing important things - in form of a panel-like window.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --inline --port 3000",
+    "start-hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --port 3000",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "author": "coget4 <coget4@gmail.com>",
+  "license": "GNU GPLv3",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-es2016": "^6.24.1",
+    "cross-env": "^5.0.1",
+    "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
+    "style-loader": "^0.18.2",
+    "wc-loader": "^1.1.4",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  },
+  "dependencies": {
+    "deep-rename-keys": "^0.2.1",
+    "expose-loader": "^0.7.3",
+    "humanize-duration": "^3.10.0"
+  }
+}

@@ -1,0 +1,54 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../app-icons/app-icons.html">
+
+<dom-module id="sidebar-menu">
+    <template>
+        <link rel="stylesheet" href="sidebar-menu.css">
+<!--        <div class="blinker">
+            <div class="blinker__inner">
+                <div class="blinker__circle"></div>
+                <div class="blinker__circle"></div>
+                <div class="blinker__circle"></div>
+            </div>
+            Scroll down for more
+        </div>-->
+        <div class="overlay"></div>
+        <iron-selector class="sidebar" attr-for-selected="page" fallback-selection="stats" selected="{{selectedPage}}">
+            <div class="sidebar__item" page="stats">
+                <iron-icon class="sidebar__icon" icon="appicons:stats"></iron-icon>
+                <div class="sidebar__title">Stats</div>
+            </div>
+            <div class="sidebar__item" page="shop">
+                <iron-icon class="sidebar__icon" icon="appicons:shop"></iron-icon>
+                <div class="sidebar__title">Shop</div>
+            </div>
+            <div class="sidebar__item" page="maps">
+                <iron-icon class="sidebar__icon" icon="appicons:maps"></iron-icon>
+                <div class="sidebar__title">Maps</div>
+            </div>
+            <div class="sidebar__item" page="settings">
+                <iron-icon class="sidebar__icon" icon="appicons:settings"></iron-icon>
+                <div class="sidebar__title">Settings</div>
+            </div>
+            <div class="sidebar__item" page="help">
+                <iron-icon class="sidebar__icon" icon="appicons:help"></iron-icon>
+                <div class="sidebar__title">Help</div>
+            </div>
+            <div class="sidebar__item">
+                <iron-icon class="sidebar__icon" icon="appicons:tops"></iron-icon>
+                <div class="sidebar__title">Tops</div>
+            </div>
+            <div class="sidebar__item">
+                <iron-icon class="sidebar__icon" icon="appicons:clan"></iron-icon>
+                <div class="sidebar__title">Clans</div>
+            </div>
+            <div class="sidebar__item">
+                <iron-icon class="sidebar__icon" icon="appicons:worker"></iron-icon>
+                <div class="sidebar__title">Coming soon</div>
+            </div>
+        </iron-selector>
+    </template>
+    <script src="sidebar-menu.js"></script>
+</dom-module>

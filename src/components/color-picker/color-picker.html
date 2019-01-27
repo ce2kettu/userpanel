@@ -1,0 +1,25 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-if.html">
+<link rel="import" href="../../bower_components/polymer/lib/mixins/gesture-event-listeners.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../app-icons/app-icons.html">
+
+<dom-module id="color-picker">
+    <template>
+        <link rel="stylesheet" href="color-picker.css">
+        <div class="color" on-tap="_openDialog" no-color$="[[!_noColor(color)]]">
+            <iron-icon class="color__icon" icon="appicons:color-picker"></iron-icon>
+            <dom-if if="[[color]]">
+                <template>
+                    <iron-icon class="color__check" icon="appicons:check"></iron-icon>
+                </template>
+            </dom-if>
+            <dom-if if="[[!color]]">
+                <template>
+                    <iron-icon class="color__check" icon="appicons:cross"></iron-icon>
+                </template>
+            </dom-if>
+        </div>
+    </template>
+    <script src="color-picker.js"></script>
+</dom-module>

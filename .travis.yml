@@ -1,0 +1,18 @@
+language: node_js
+sudo: required
+dist: trusty
+node_js: stable
+cache:
+  directories:
+    - node_modules
+install:
+  - yarn install
+  - yarn global add bower
+  - bower install
+  - yarn build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master

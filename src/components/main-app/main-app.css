@@ -1,0 +1,74 @@
+:host {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel {
+    width: 95em;
+    height: 50em;
+    opacity: 0;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    border-radius: 3px 0 0 3px;
+/*    transform: scale(0);
+    transition: transform .5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;*/
+}
+
+/*:host([opened]) .panel {
+    opacity: 1;
+    transform: scale(1);
+}*/
+
+@media screen and (aspect-ratio: 4/3), (aspect-ratio: 5/4){
+  .panel {
+      width: 70em;
+      height: 40em;
+  }
+}
+
+.panel__body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    /*backface-visibility: hidden;*/
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #292b2f;
+    opacity: 1;
+    transition: opacity .3s linear;
+}
+
+.background[transparent] {
+    opacity: 0.9;
+}
+
+.iron-selected {
+    z-index: 1;
+    opacity: 1;
+}

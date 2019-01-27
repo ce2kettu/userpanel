@@ -1,0 +1,8 @@
+- Finish page transitions
+- Add admin/player commands in help page, and maybe a general tutorial? FAQ probably
+- Cool open animation? Start side-panel from center and expand dialog-body
+- Finish confirm dialog
+- Trim player commands
+- Enhance notification animation
+- Add scroll lock to dropdown-menu
+- Improve color picker, contrast for icons, hex input
